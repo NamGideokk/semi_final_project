@@ -1,0 +1,134 @@
+
+.product-uplaod-wrapper{
+    max-width: 900px;
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 40px;
+    color: var(--font-dark);
+    background-color: var(--bgcolor-default);
+}
+.product-uplaod-wrapper P{
+    line-height: 44px;
+}
+.product-uplaod-wrapper input,select{
+    height: 34px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid var(--font-light);
+    transition: 0.3s;
+}
+.product-uplaod-wrapper input:focus, select:focus{
+    outline: none;
+    border: 1px solid var(--accent-default);
+    box-shadow: 0 0 7px var(--accent-light);
+}
+.product-uplaod-container01{
+    max-width: 900px;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
+    grid-template-rows: 40px 40px;
+    grid-template-areas: 
+        "puc01-1 puc01-2 puc01-3 puc01-4"
+        "puc01-5 puc01-6 puc01-7 puc01-8"
+    ;
+}
+.product-uplaod-container01 input, select{
+    width: 98%;
+}
+.puc01-1{
+    grid-area: puc01-1;
+    min-width: 115px;
+}
+.puc01-2{
+    grid-area: puc01-2;
+}
+.puc01-3{
+    grid-area: puc01-3;
+    min-width: 115px;
+}
+.puc01-4{
+    grid-area: puc01-4;
+}
+.puc01-5{
+    grid-area: puc01-5;
+    min-width: 115px;
+}
+.puc01-6{
+    grid-area: puc01-6;
+}
+.puc01-7{
+    grid-area: puc01-7;
+    min-width: 115px;
+}
+.puc01-8{
+    grid-area: puc01-8;
+}
+
+.product-uplaod-container02{
+    max-width: 900px;
+    width: 100%;
+    height: 40px;
+    margin: 0 auto 5px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 2fr 1fr 2fr 1fr 2fr;
+    grid-template-rows: 40px;
+    grid-template-areas: 
+        "puc02-1 puc02-2 puc02-3 puc02-4 puc02-5 puc02-6 puc02-7 puc02-8"
+    ;
+}
+.product-uplaod-container02 input{
+    width: 96%;
+}
+.puc02-1{
+    grid-area: puc02-1;
+    min-width: 60px;
+}
+.puc02-2{
+    grid-area: puc02-2;
+}
+.puc02-3{
+    grid-area: puc02-3;
+    min-width: 60px;
+}
+.puc02-4{
+    grid-area: puc02-4;
+}
+.puc02-5{
+    grid-area: puc02-5;
+    min-width: 60px;
+}
+.puc02-6{
+    grid-area: puc02-6;
+}
+.puc02-7{
+    grid-area: puc02-7;
+    min-width: 60px;
+}
+.puc02-8{
+    grid-area: puc02-8;
+}
+
+.upload-prd-btn{
+    margin-top: 30px;
+    font-size: 20px;
+    width: fit-content;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    background-color: var(--accent-default);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.upload-prd-btn:hover{
+    box-shadow: 0 3px 10px var(--accent-light);
+    transform: translateY(-3px);
+}

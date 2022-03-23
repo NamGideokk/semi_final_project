@@ -1,0 +1,33 @@
+/* 화면 최상단 이동 버튼 */
+.up-btn{
+    position: fixed;
+    margin-right: 50px;
+    top: 90vh;
+    left: 90vw;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 55px;
+    border-radius: 100px;
+    border: thin solid #dfdfdf;
+    color: #636363;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: all 0.3s;
+    z-index: 100;
+}
+.up-btn:hover{
+    color: #2dc95c;
+    transition: all 0.3s;
+}
+@media screen and (max-width:1150px) {
+    .up-btn{
+        left: 86vw;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        line-height: 40px;
+    }
+}

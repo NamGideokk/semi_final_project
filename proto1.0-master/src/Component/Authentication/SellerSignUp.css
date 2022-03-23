@@ -1,0 +1,584 @@
+.form h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+.form {
+    margin: 250px auto 300px auto;
+    width: 600px;
+    height: 100%;
+
+}
+
+
+.logo-img-section{
+    width: 140px;
+    height: fit-content;
+    margin: 0 auto 40px auto;
+}
+
+.logo-img-section img{
+    width: 100%;
+
+}
+
+
+/* 회원가입 레이아웃 배치 */
+.form > .container {
+    max-width: 600px;
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 20px;
+
+    display: grid;
+
+    /* grid-gap:10px; */
+    grid-template-columns: 120px 332px 80px;
+    grid-template-rows: 50px;
+
+    grid-template-areas:
+        "nav1 input1 button1"
+        "id-error id-error id-error"
+        "nav2 input2 input2"
+        "pw-error pw-error pw-error"
+        "nav3 input3 input3"
+        "pwchk-error pwchk-error pwchk-error"
+        "nav4 input4 input4"
+        "nav5 input5 button5"
+        "nav6 input6 input6"
+        "nav7 input7 input7"
+        "nav8 input8 input8"
+        "nav9 input9 input9"
+        "nav10 input10  input10"
+        "nav11 input11 input11"
+        "nav12 input12 input12"
+        "nav13 input13 button13"
+        ;
+
+}
+
+
+.container div {
+    /* background-color: yellow; */
+    line-height: 50px;
+}
+
+
+
+div .nav {
+    /* font-weight: bold; */
+    font-size: 14px;
+    padding-left: 10px;
+}
+
+
+.input input {
+    height: 40px;
+    width: 310px;
+    border: thin solid rgb(165, 165, 165);
+    padding-left: 5px;
+
+    border-radius: 10px;
+
+    vertical-align: middle;
+
+    float: left;
+
+    position: relative;
+    top: 10%;
+
+}
+
+
+.input input:focus {
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+    box-shadow: 0 0 5px rgb(76, 204, 71);
+    transition: all 0.3s;
+}
+
+#input13>span {
+    margin-right: 5px;
+}
+
+
+#address_kakao {
+    width: 310px;
+}
+
+#address_zonecode {
+    width: 72px;
+}
+
+
+/* 주소 찾기 크게 */
+#bigButton {
+    width: 310px;
+    background-color: #1EC800;
+    color: white;
+
+    float: left;
+
+    position: relative;
+    top: 10%;
+
+}
+
+
+/* 주소 찾기 숨김 */
+.hidden{
+    display:none;
+}
+
+
+/* 오른쪽 버튼들 */
+.container button {
+    height: 40px;
+    width: 70px;
+    border: thin solid #1EC800;
+    background-color: transparent;
+    color: #1EC800;
+    /* font-weight: bold; */
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+div .button {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    background-color: transparent;
+
+}
+
+#reBtn {
+    cursor: pointer;
+}
+
+
+/* 라디오 버튼 커스텀 */
+#input8 input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid gray;
+    border-radius: 50%;
+
+    margin-right: 5px;
+
+    cursor: pointer;
+}
+
+#input8 input[type="radio"]:before {
+    content:'';
+    display:block;
+    width: 10px;
+    height: 10px;
+    margin: 4px -1px;
+    border-radius: 50%;
+}
+
+#input8 input[type="radio"]:checked::before {
+    background-color: #1EC800;
+}
+
+
+#input8 > label {
+    cursor: pointer;
+}
+
+#personal, #company {
+    margin-top: 8px;
+}
+
+#personalLabel {
+    float: left;
+}
+
+#company {
+    margin-left: 25%;
+}
+
+
+/* 이용약관 부분 */
+
+.wrapper {
+    max-width: 600px;
+    height: 100px;
+    padding: 20px;
+
+    display: grid;
+
+    grid-template-columns: 120px 332px 80px;
+    grid-template-rows: 50px;
+
+    grid-template-areas:
+        "policy policyCk terms-of-use-show"
+        ;
+
+}
+
+
+
+/* 체크박스 커스텀 */
+#policyCheck input[type="checkbox"] {
+    appearance: none;
+
+    top: 10px;
+
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    content: '';
+    border-radius: 50%;
+    cursor: pointer;
+
+    margin-right: 5px;
+}
+
+
+#policyCheck input[type="checkbox"] + label {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    cursor: pointer;
+}
+
+
+#policyCheck input[type="checkbox"] + label::before {
+    display: none;
+    /* position: absolute;
+    top: 10px;
+
+    width: 25px;
+    height: 25px;
+    border: 1px solid gray;
+    content: '';
+    border-radius: 50%;
+    cursor: pointer; */
+}
+
+
+#policyCheck input[type="checkbox"]:focus + label::before {
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+    box-shadow: 0 0 5px rgb(76, 204, 71);
+    transition: all 0.3s;
+}
+
+#policyCheck input[type="checkbox"]:checked + label::after {
+    position: absolute;
+    top:14px;
+    left: -26px;
+
+    content: '';
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    line-height: 100%;
+
+
+    width: 15px;
+    height: 15px;
+    background-color: #1EC800;
+    border: 1px solid #1EC800;
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+
+#policyCheck h3 {
+    display: inline-block;
+
+    cursor: pointer;
+}
+
+
+/* 회원가입 버튼 */
+#sign-up-btn{
+    width: 100px;
+    height: 40px;
+    border: thin solid rgb(76, 204, 71);
+    border-radius: 10px;
+    background: none;
+    color: rgb(76, 204, 71);
+    margin-left: 50%;
+    transform: translate(-50%);
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+#sign-up-btn:hover{
+    background-color: rgb(76, 204, 71);
+    box-shadow: 0 0 20px rgb(107, 230, 103);
+    color: white;
+    transition: all 0.3s;
+}
+
+#terms-of-use-show{
+    grid-area: terms-of-use-show;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+
+
+
+
+/* 시동구 주소 설정하기 */
+
+#nav12 {
+    line-height: 70px;
+    margin: 0;
+}
+
+.MuiFormControl-root.css-1869usk-MuiFormControl-root{
+    margin-left: 0;
+    margin-right: 15px;
+    width: 110px;
+
+}
+
+#demo-simple-select-helper {
+    height: 35px;
+    border-radius: 10px;
+
+    margin:0;
+
+    line-height: 35px;
+}
+
+.MuiInputBase-root.MuiInputBase-colorPrimary.MuiInputBase-formControl.css-1w0zlcs-MuiInputBase-root{
+    width: 100%;
+}
+
+
+
+/* 이용약관 모달 */
+
+.csu-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+.csu-modal-inner{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  20px 20px 40px #d9d9d9,
+             -20px -20px 40px #ffffff;
+}
+.csu-modal-inner p{
+    font-size: 24px;
+    color: rgb(73, 73, 73);
+    text-align: center;
+}
+.csu-modal-inner textarea{
+    width: 360px;
+    height: 450px;
+    resize: none;
+    margin: 0 auto;
+    padding: 10px;
+    border: thin solid rgb(180, 180, 180);
+}
+.csu-modal-inner textarea:focus{
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+}
+.csu-modal-inner button{
+    background: none;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    margin: 0 auto;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* grid-area 설정 */
+/* 회원가입 grid 설정 */
+
+#nav1 {
+    grid-area: nav1;
+}
+
+#input1 {
+    grid-area: input1;
+}
+
+#button1 {
+    grid-area: button1;
+}
+
+#nav2 {
+    grid-area: nav2;
+}
+
+#input2{
+    grid-area: input2;
+}
+
+#nav3{
+    grid-area: nav3;
+}
+
+#input3{
+    grid-area: input3;
+}
+
+#nav4{
+    grid-area: nav4;
+}
+
+#input4{
+    grid-area: input4;
+}
+
+#nav5 {
+    grid-area: nav5;
+}
+
+#input5 {
+    grid-area: input5;
+}
+
+
+#button5 {
+    grid-area: button5;
+}
+
+#input6 {
+    grid-area: input6;
+}
+
+#button6 {
+    grid-area: button6;
+}
+
+#input7 {
+    grid-area: input7;
+}
+
+#button7 {
+    grid-area: button7;
+}
+
+#input8 {
+    grid-area: input8;
+}
+
+
+#button8 {
+    grid-area: button8;
+}
+
+#input9 {
+    grid-area: input9;
+}
+
+#button9 {
+    grid-area: button9;
+}
+
+#input10 {
+    grid-area: input10;
+}
+
+#button10 {
+    grid-area: button10;
+}
+
+#input11 {
+    grid-area: input11;
+}
+
+#button11 {
+    grid-area: button11;
+}
+
+#nav12 {
+    grid-area: nav12;
+}
+
+#nav13 {
+    grid-area: nav13;
+}
+
+#input12 {
+    grid-area: input12;
+}
+
+
+
+#id-error{
+    grid-area: id-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: red;
+}
+
+#pw-error{
+    grid-area: pw-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: red;
+}
+
+#pwchk-error{
+    grid-area: pwchk-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: red;
+}
+
+
+
+/* 이용약관 grid 설정 */
+.wrapper div {
+    /* background-color: yellow; */
+    line-height: 50px;
+}
+
+#policy {
+    grid-area: policy;
+}
+
+#policyCheck {
+    grid-area: policyCk;
+}

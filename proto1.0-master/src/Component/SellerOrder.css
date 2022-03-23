@@ -1,0 +1,95 @@
+.sellerBoard {
+  height: 200px;
+  margin: 50px 20px 100px 20px;
+
+  display: grid;
+
+  grid-template-columns: 220px 220px 220px 220px;
+
+  grid-gap: 5px;
+
+  grid-template-areas: "delivery done takeOut canceled";
+}
+
+.sellerBoard > div {
+  border-radius: 10%;
+  background-color: #a1a1a146;
+  padding: 50px 30px 0 30px;
+}
+
+.sellerBoard > div p {
+  text-align: right;
+  padding-top: 10px;
+  font-size: 50px;
+}
+
+.delivery {
+  /* background-color: aqua; */
+
+  grid-area: delivery;
+}
+
+.delivery:hover {
+  background-color: rgba(201, 201, 201, 0.829);
+}
+
+.deliveryDone {
+  /* background-color: tomato; */
+
+  grid-area: done;
+}
+
+.deliveryDone:hover {
+  background-color: rgba(201, 201, 201, 0.829);
+}
+
+.takeOut {
+  /* background-color: brown; */
+
+  grid-area: takeOut;
+}
+
+.takeOut:hover {
+  background-color: rgba(201, 201, 201, 0.829);
+}
+
+.canceled {
+  /* background-color: chartreuse; */
+
+  grid-area: canceled;
+}
+
+.canceled:hover {
+  background-color: rgba(201, 201, 201, 0.829);
+}
+
+.seller_order_paging {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  color: #404a5c;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.btn.active {
+  background-color: rgb(76, 204, 71);
+  color: #fff;
+}
+
+.btn:hover {
+  font-size: 1.5rem;
+  color: #000000;
+}
+.sellerPrd-paging {
+  margin-top: 30px !important;
+}
+.to-left:hover,
+.to-right:hover,
+.to-left-end:hover {
+  transform: scale(1.5);
+}

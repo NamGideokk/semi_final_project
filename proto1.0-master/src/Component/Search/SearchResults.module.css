@@ -1,0 +1,92 @@
+/* 20/40/60 개씩 보기 필터 */
+.prd-list-filter{
+    display: flex;
+    justify-content: space-between;
+    width: 1100px;
+    height: 40px;
+    line-height: 40px;
+    text-align: right;
+    margin: 100px auto 10px auto;
+    color: rgb(97, 97, 97);
+    border-bottom: 1px solid rgb(179, 179, 179);
+}
+.prd-list-filter>div>span{
+    margin: 0 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.right-filter>span:hover{
+    color: var(--accent-default);
+}
+
+.pcb{
+    width: 1100px;
+    height: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+/* 상품목록 페이지 */
+.prd-paging{
+    width: 1100px;
+    height: 40px;
+    line-height: 33px;
+    margin: 10px auto 100px auto;
+    text-align: center;
+    font-size: 18px;
+    border-top: 1px solid rgb(179, 179, 179);
+}
+
+a.pageNum {
+    color: var(--font-default);
+    cursor: pointer;
+    margin: 7px;
+}
+a.pageNum:hover {
+    color: var(--accent-default);
+    transition: all 0.3s;
+}
+
+a.selected {
+    color: var(--accent-default);
+    font-weight: bold;
+}
+.to-left-end,
+.to-left,
+.to-right,
+.to-left-end{
+    padding-top: 5px;
+}
+.dddddd{
+    display: inline-block;
+    min-width: 30px;
+    width: fit-content;
+    height: 30px;
+    border-radius: 100px;
+    margin-top: 10px;
+    padding: 0 5px;
+    transition: 0.3s;
+}
+.dddddd:hover{
+    background-color: var(--accent-default);
+    opacity: 0.5;
+    color: white;
+}
+.filter-btn:hover{
+    color: var(--accent-default) !important;
+}
+.high-price-icon,
+.high-salesrate-icon{
+    margin: 0 10px;
+    transition: 0.3s;
+}
+.low-price-icon,
+.low-salesrate-icon{
+    transition: 0.3s;
+}
+.high-price-icon:hover,
+.high-salesrate-icon:hover,
+.low-price-icon:hover,
+.low-salesrate-icon:hover{
+    color: var(--accent-default);
+}

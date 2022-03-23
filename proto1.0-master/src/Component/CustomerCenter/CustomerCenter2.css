@@ -1,0 +1,266 @@
+
+a{
+    text-decoration: none; /* 밑줄제거 */
+}
+
+img{
+    max-width: 100%;
+}
+
+article{
+    width: 90%;
+    /* background-color: yellowgreen; */
+}
+
+/* .ahome{
+    width: 120px;
+    height: 50px;
+    font-family: 'snap';
+    color: rgb(76, 204, 71);;
+    font-size: 45px;
+}
+ */
+
+
+/* .menu{
+    display: flex;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-top: 30px;
+    list-style:none;
+}
+
+.menu li{
+    margin-left: 30px;
+}
+
+.menu a{
+    color:black;
+}
+
+.menu a:hover{
+    color: rgb(76, 204, 71);
+} */
+
+/* .page-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom: 20px;
+} */
+
+.wrapper{
+    max-width: 1100px;
+    margin:0 auto;
+    padding: 0 4%;
+    padding-bottom: 20px;
+}
+
+.content{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.content p{
+    font-size: 18px;
+    margin: 10px 0 40px;
+}
+
+.page-title{
+    font-size: 80px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+article {
+    height: 700px;
+}
+
+article .button{
+    font-size: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+article .button:hover{
+    background-color: gray;
+}
+
+
+#home .page-title{
+    text-transform: none;
+}
+
+
+.new-contents{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.post-info{
+    position: relative;
+    padding-top: 4px;
+    margin-bottom: 40px;
+}
+
+.sub-title{
+    font-size: 22px;
+    padding:0 8px 8px;
+    font-weight:bold;
+    border-bottom: 2px solid black;
+    
+}
+
+.sub-menu{
+    list-style: none;
+}
+
+.sub-menu li{
+    border-bottom: 1px solid gray;
+}
+
+.sub-menu a{
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover{
+    background-color: rgb(76, 204, 71);;
+    color: white;
+}
+
+/* .this{
+    background-color: rgb(76, 204, 71);;
+    color: white;
+} */
+
+table{
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead{
+    text-align: center;
+    font-size:14pt;
+    height:40px;
+    vertical-align:middle;
+    line-height:30px;
+    border-bottom: 1px solid black;
+    padding-bottom: 5px;
+}
+
+tbody{
+    text-align: center;
+}
+
+tbody tr{
+    height: 100px;
+
+    border-bottom: 1px solid rgb(199, 197, 197);
+    padding: 10px 0;
+}
+
+tbody tr:hover{
+    background-color: rgb(76, 204, 71);
+    color: white;
+}
+
+.mini-title{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom: 5px;
+    /*border-bottom: 1px solid rgb(199, 197, 197);*/
+}
+
+.chap-img{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+.chap{
+    height: 300px;
+
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgb(199, 197, 197);
+}
+
+.chap > img {
+    margin-bottom:50px;
+}
+
+.chap p {
+    margin-bottom: 20px;
+}
+
+.faq_title{
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(199, 197, 197);
+}
+
+.faq-answer{
+    font-weight: bold;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid rgb(199, 197, 197);
+}
+
+#write{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-right: 100px;
+    display: block;
+    float: right;
+    background-color: rgb(76, 204, 71);
+    color: white;
+    border-style: none;
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: 3px;
+}
+
+#write:hover{
+    background-color: rgb(58, 161, 54);
+    color: rgb(199, 197, 197);
+}
+
+.write-title{
+    font-weight: bold;
+    width: 50px;
+    display: block;
+}
+
+.write-input{
+    width: 600px;
+    
+}
+
+.write-textarea{
+    
+    width: 600px;
+    height: 400px;
+}
+
+#question-write{
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    display: block;
+    float: right;
+    background-color: rgb(76, 204, 71);
+    color: white;
+    border-style: none;
+    border: 1px solid rgb(199, 197, 197);
+    border-radius: 3px;
+    margin-right: 200px;
+}

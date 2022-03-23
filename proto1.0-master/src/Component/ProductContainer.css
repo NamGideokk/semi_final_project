@@ -1,0 +1,101 @@
+
+/* 각 상품 박스 */
+.product-container{
+    display: inline-block;
+    height: 405px;
+    width: 235px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+/* 상품 이미지 */
+.product-img{
+    position: relative;
+    width: 235px;
+    height: 300px;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.product-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+.product-img img:hover{
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+
+/* 제품 정보 grid*/
+.product-info{
+    width: 235px;
+    height: 105px;
+    display: grid;
+    grid-template-columns: 150px 85px;
+    grid-template-rows: 55px 25px 25px;
+    grid-template-areas:
+        "prd-name prd-name"
+        "prd-rating prd-price"
+        "prd-dis-rt prd-dis-price";
+}
+.product-name{
+    grid-area: prd-name;
+    font-weight: bold;
+    padding: 3px 0;
+    padding-top: 8px;
+    line-height: 22px;
+}
+.product-rating{
+    grid-area: prd-rating;
+    font-weight: bold;
+    line-height: 30px;
+}
+.prd-rating{
+    color: rgb(245, 223, 24);
+    margin-right: 5px;
+}
+.review-count{
+    color: rgb(82, 82, 82);
+}
+.product-price{
+    grid-area: prd-price;
+    text-align: right;
+    font-weight: bold;
+    line-height: 30px;
+}
+.product-discount-rate{
+    grid-area: prd-dis-rt;
+    text-align: right;
+    color: red;
+    font-weight: bold;
+    line-height: 30px;
+}
+.product-discount-price{
+    grid-area: prd-dis-price;
+    text-align: right;
+    font-weight: bold;
+    line-height: 30px;
+}
+/* 장바구니 바로 추가 버튼 */
+.cart-add-btn{
+    position: relative;
+    bottom: 160px;
+    left: 177px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: var(--accent-default);
+    opacity: 0.5;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 9px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all 0.3s;
+}
+.cart-add-btn:hover{
+    color: white;
+    background-color: #3ce26f;
+    opacity: 0.9;
+}

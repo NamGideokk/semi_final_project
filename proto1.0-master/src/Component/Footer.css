@@ -1,0 +1,172 @@
+/* footer grid*/
+.footer-wrapper{
+    width: 100%;
+    height: 312px;
+    border-top: thin solid #d8d8d8;
+}
+.footer{
+    width: 1100px;
+    height: 312px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 162px 330px 300px 308px;
+    grid-template-rows: 40px 140px 40px 90px;
+    grid-template-areas: 
+        "footer-top-left footer-top-left footer-top-right footer-top-right"
+        "footer-mid-left01 footer-mid-left02 footer-mid-right01 footer-mid-right01"
+        "footer-mid-left01 footer-mid-left02 footer-mid-right02 footer-mid-right03"
+        "footer-bottom footer-bottom footer-bottom footer-bottom";
+}
+.footer div{
+    padding: 0 10px;
+}
+.footer-top-left{
+    grid-area: footer-top-left;
+    line-height: 40px;
+    font-size: 17px;
+    font-weight: bold;
+}
+.footer-top-right{
+    grid-area: footer-top-right;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    color: #686868;
+}
+.footer-top-right a:hover{
+    color: var(--accent-default);
+}
+.footer-mid-left01{
+    grid-area: footer-mid-left01;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer-mid-left01 button{
+    font-size: 20px;
+    width: 142px;
+    height: 28px;
+    border: thin solid #747474;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+.footer-mid-left01 button:hover{
+    color: var(--accent-default);
+    border: thin solid var(--accent-default);
+    transition: all 0.3s;
+}
+.footer-mid-left02{
+    grid-area: footer-mid-left02;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer-mid-right01{
+    grid-area: footer-mid-right01;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    line-height: 24px;
+    font-size: 15px;
+}
+.footer-mid-right02{
+    grid-area: footer-mid-right02;
+    line-height: 40px;
+}
+.footer-amazon{
+    padding-right: 10px;
+    font-size: 22px;
+}
+.footer-mid-right03{
+    grid-area: footer-mid-right03;
+    line-height: 40px;
+    font-size: 22px;
+    text-align: right;
+}
+.footer-youtube{
+    color: red;
+    margin-left: 10px;
+    font-size: 22px;
+}
+.footer-facebook{
+    color: #2578a8;
+    margin-left: 10px;
+    font-size: 22px;
+}
+.footer-google{
+    color: #17a140;
+    margin-left: 10px;
+    font-size: 22px;
+}
+.footer-instargram{
+    color: #df2999;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.footer-youtube:hover,
+.footer-facebook:hover,
+.footer-google:hover,
+.footer-instargram:hover{
+    transform: translateY(-3px);
+    transition: all 0.3s;
+}
+.footer-bottom{
+    grid-area: footer-bottom;
+    font-size: 13px;
+    color: #616161;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding-top: 8px !important;
+    border-top: thin solid #d8d8d8;
+}
+/* footer 반응형 */
+@media screen and (max-width:800px) {
+    .footer{
+        width: 96vw;
+        height: 477px;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 30px 150px 30px 150px 40px 75px;
+        grid-template-areas: 
+        "footer-top-left footer-top-left"
+        "footer-mid-left01 footer-mid-left02"
+        "footer-top-right footer-top-right"
+        "footer-mid-right01 footer-mid-right01"
+        "footer-mid-right02 footer-mid-right03"
+        "footer-bottom footer-bottom";
+    }
+    .footer-top-left{
+        text-align: center;
+        line-height: 30px;
+    }
+    .footer-mid-left01{
+        text-align: center;
+    }
+    .footer-mid-left01 button{
+        margin: 0 auto;
+    }
+    .footer-mid-left02{
+        text-align: center;
+    }
+    .footer-top-right{
+        justify-content: space-between;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .footer-mid-right01{
+        padding-top: 5px !important;
+        font-size: 15px;
+    }
+    .footer-mid-right02{
+        text-align: center;
+    }
+    .footer-mid-right03{
+        text-align: center;
+    }
+    .footer-bottom{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,97 @@
+/* 이 상품 어때요? section */
+.recommend-produt-01{
+    width: 1100px;
+    height: 480px;
+    margin: 100px auto 0 auto;
+}
+.recommend-produt-01 h2{
+    display: inline-block;
+    margin: 0 10px;
+}
+.recommend-produt-01 p{
+    display: inline-block;
+}
+.recommend-produt-01-inner{
+    display: flex;
+    width: 1100px;
+    height: 445px;
+}
+/* 각 상품 박스 */
+.rp01-icon{
+    height: 405px;
+    width: 235px;
+    margin: 20px 20px;
+    cursor: pointer;
+}
+/* 상품 이미지 */
+.rp01-img{
+    position: relative;
+    width: 235px;
+    height: 300px;
+    overflow: hidden;
+}
+.rp01-icon img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+.rp01-img img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s;
+}
+
+/* 제품 정보 grid*/
+.product-info{
+    width: 235px;
+    height: 105px;
+    display: grid;
+    grid-template-columns: 150px 85px;
+    grid-template-rows: 55px 25px 25px;
+    grid-template-areas:
+        "prd-name prd-name"
+        "prd-price prd-price"
+        "prd-dis-rt prd-dis-price";
+}
+.product-name{
+    grid-area: prd-name;
+    font-weight: bold;
+    padding: 3px 0;
+}
+.product-price{
+    grid-area: prd-price;
+    text-align: right;
+    font-weight: bold;
+}
+.product-discount-rate{
+    grid-area: prd-dis-rt;
+    text-align: right;
+    color: red;
+    font-weight: bold;
+}
+.product-discount-price{
+    grid-area: prd-dis-price;
+    text-align: right;
+    font-weight: bold;
+}
+/* 장바구니 바로 추가 버튼 */
+.cart-add-btn{
+    position: relative;
+    bottom: 160px;
+    left: 177px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+    background-color: #35c25fb0;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 4px;
+    color: rgba(255, 255, 255, 0.719);
+    transition: all 0.3s;
+}
+.cart-add-btn:hover{
+    color: white;
+    background-color: #3ce26f;
+    transition: all 0.3s;
+}

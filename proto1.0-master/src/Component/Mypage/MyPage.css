@@ -1,0 +1,512 @@
+
+.user-section-wrapper {
+    min-height: 500px;
+    max-height: fit-content;
+    justify-content: center;
+    display: flex;
+    margin: 70px auto 100px auto;
+    width: 1100px;
+}
+
+.us-left-container {
+    width: 160px;
+    height: fit-content;
+    /* background-color: yellowgreen; */
+}
+.user-section-title{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--font-dark);
+}
+.user-section-menu li{
+    margin: 0 auto;
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid var(--font-light);
+    transition: 0.3s;
+    cursor: pointer;
+}
+.user-section-menu li:hover{
+    background-color: var(--accent-default);
+    color: white;
+    padding-left: 15px;
+}
+
+
+
+.us-right-container {
+    width: 940px;
+    min-height: 500px;
+    max-height: fit-content;
+}
+.mypage-home{
+    margin: 120px auto;
+    width: 100%;
+    height: max-content;
+    font-size: 40px;
+    text-align: center;
+}
+.mypage-home>p{
+    display: inline-block;
+    font-size: 20px;
+}
+
+
+
+/* 장바구니 */
+.rc-mycart {
+    width: 100%;
+    height: 100%;
+}
+.rc-purchase-product-wrapper{
+    margin-top: 10px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+.rc-mycart>h3{
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    border-bottom: 2px solid var(--font-dark);
+    color: var(--font-dark);
+}
+
+/* 주문/배송 조회 */
+.rc-order {
+    width: 100%;
+    height: 100%;
+}
+.rc-order>h3{
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    border-bottom: 2px solid var(--font-dark);
+    color: var(--font-dark);
+}
+.rc-order-list-wrapper{
+    margin-top: 10px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+/* 주문/배송 조회 -> 주문건 별 컨테이너 */
+.order-container-wrapper{
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+.order-container{
+    margin: 10px auto;
+    max-width: 1000px;
+    width: 95%;
+    height: 150px;
+
+    display: grid;
+    grid-template-columns: 120px 89px 3fr 150px;
+    grid-template-rows: 40px 109px;
+    grid-template-areas:
+        "oc01 oc01 oc01 oc02"
+        "oc03 oc04 oc05 oc06"
+    ;
+    font-size: 20px;
+    background-color: var(--bgcolor-default);
+}
+.oc01{
+    grid-area: oc01;
+    padding: 12px 10px 0 10px;
+    color: var(--font-default);
+}
+.oc02{
+    grid-area: oc02;
+    font-size: 16px;
+    padding-top: 16px;
+    text-align: center;
+    color: var(--font-default);
+}
+.oc03{
+    grid-area: oc03;
+    border-top: 1px solid var(--border-default);
+}
+.oc04{
+    grid-area: oc04;
+    padding: 10px;
+    line-height: 31px;
+    border-top: 1px solid var(--border-default);
+    font-size: 16px;
+}
+.oc05{
+    grid-area: oc05;
+    padding: 10px;
+    line-height: 31px;
+    border-top: 1px solid var(--border-default);
+    font-size: 16px;
+}
+.oc06{
+    grid-area: oc06;
+    border-top: 1px solid var(--border-default);
+}
+.oc06-detail-btn,
+.oc06-review-btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 15px;
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+    margin: 0 auto;
+    margin-top: 37px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.oc06-detail-btn:hover,
+.oc06-review-btn:hover{
+    color: var(--accent-default);
+    border: 1px solid var(--accent-default);
+}
+
+.oc03-img-container{
+    width: 100px;
+    height: 90%;
+    margin: 6px auto;
+    overflow: hidden;
+}
+.oc03-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 나의 찜한 상품 컨테이너 */
+.rc-like{
+    width: 100%;
+    height: 100%;
+}
+.rc-like>h3{
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    border-bottom: 2px solid var(--font-dark);
+    color: var(--font-dark);
+}
+.rc-like-list-wrapper{
+    margin-top: 10px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+
+/* 나의 리뷰 내역 컨테이너 */
+.rc-review{
+    width: 100%;
+    height: 100%;
+}
+.rc-review>h3{
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    border-bottom: 2px solid var(--font-dark);
+    color: var(--font-dark);
+}
+.rc-review-list-wrapper{
+    margin-top: 10px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+
+/* 나의 정보 조회 컨테이너 */
+.rc-myinfo{
+    width: 100%;
+    height: 100%;
+}
+.rc-myinfo>h3{
+    text-align: right;
+    padding-top: 35px;
+    padding-bottom: 5px;
+    padding-right: 24px;
+    border-bottom: 2px solid var(--font-dark);
+    color: var(--font-dark);
+}
+.rc-myinfo-wrapper{
+    margin-top: 10px;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 마이페이지 -> 유저 정보 */
+.user-info-container{
+    max-width: 1000px;
+    width: 96%;
+    height: 120px;
+    box-shadow: 0 3px 10px rgba(201, 201, 201, 0.829);
+    margin: 110px auto 50px auto;
+    border-radius: 20px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 360px 1fr 1fr 1fr;
+    grid-template-rows: 120px;
+    grid-template-areas:
+        "uic01 uic02 uic03 uic04"
+    ;
+}
+
+.uic01{
+    grid-area: uic01;
+    min-width: 330px;
+    position: relative;
+    font-size: 24px;
+    padding-top: 40px;
+    background-color: #fafafa;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    transition: 0.3s;
+}
+.uic02{
+    grid-area: uic02;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+.uic03{
+    grid-area: uic03;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-top: 5px;
+    background-color: #fafafa;
+    transition: 0.3s;
+}
+.uic04{
+    grid-area: uic04;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 5px;
+    background-color: #fafafa;
+    transition: 0.3s;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.uic01:hover,
+.uic02:hover,
+.uic03:hover,
+.uic04:hover{
+    background-color: #f3f3f3;
+}
+
+.uic01-img-container{
+    position: absolute;
+    left: 20px;
+    bottom: 30px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0 3px 10px rgba(201, 201, 201, 0.829);
+}
+.userricon{
+    font-size: 150px;
+    color: var(--font-dark);
+}
+/* .uic01-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.uic01-img-container img:hover{
+    transform: scale(1.03);
+} */
+.uic01-user-name p{
+    margin-left: 205px;
+}
+.uic01-user-name p:first-child{
+    font-size: 16px;
+    color: var(--font-dark);
+    margin-bottom: 5px;
+}
+.uic01-user-name p:last-child{
+    width: 130px;
+}
+.uic02 div:last-child{
+    display: flex;
+    justify-content: center;
+}
+.show-user-class{
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--font-dark);
+    transition: 0.3s;
+}
+.show-user-class:hover{
+    color: var(--accent-default);
+}
+.mark-green{
+    color: var(--accent-default);
+    background: none;
+}
+.users-coupon{
+    display: inline-block;
+    cursor: pointer;
+}
+@media screen and (max-width:800px) {
+    .user-info-container{
+        max-width: 700px;
+        width: 80%;
+        height: 185px !important;
+        background: transparent;
+        box-shadow: 0 3px 10px rgba(201, 201, 201, 0.829);
+        margin: 110px auto 50px auto;
+        border-radius: 20px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 120px 60px;
+        grid-template-areas:
+            "uic01 uic01 uic01"
+            "uic02 uic03 uic04"
+        ;
+    }
+    .uic01{
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 20px;
+    }
+    .uic02{
+        border-bottom-left-radius: 20px;
+    }
+    .uic02,
+    .uic03,
+    .uic04{
+        font-size: 16px !important;
+    }
+    .uic04{
+        border-top-right-radius: 0;
+    }
+}
+
+
+/* 리뷰 쓰기 폼 컨테이너 */
+.review-form-container{
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: fit-content;
+    height: fit-content;
+    padding: 40px 50px 50px 50px;
+    background-color: var(--bgcolor-default);
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(201, 201, 201, 0.829);
+}
+.review-form-container textarea{
+    width: 300px;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 5px;
+    margin-bottom: 35px;
+}
+.review-form-container textarea:focus{
+    outline: none;
+    border: 1px solid var(--accent-default);
+}
+.review-form-container select{
+    width: 170px;
+    margin-right: 18px;
+}
+.review-form-container>form>button{
+    position: relative;
+    top: 1px;
+    padding: 5px 20px;
+    font-size: 20px;
+    width: max-content;
+    height: max-content;
+    background-color: white;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent-dark);
+    transition: 0.3s;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.review-form-container>form>button:hover{
+    border: 1px solid var(--accent-default);
+    color: var(--accent-default);
+}
+.review-form-container>form>label{
+    width: fit-content;
+    height: fit-content;
+    margin: 0 40px;
+    border-radius: 5px;
+    color: var(--accent-dark);
+    background-color: white;
+    padding: 5px;
+    border: 1px solid var(--accent-dark);
+    cursor: pointer;
+}
+.review-form-container>form>input[type="file"] {
+    display: none;
+}
+
+.off-modal{
+    position: relative;
+    bottom: 40px;
+    left: 320px;
+    cursor: pointer;
+    font-size: 20px;
+    color: var(--font-default);
+    transition: 0.3s;
+}
+.off-modal:hover{
+    color: red;
+}

@@ -1,0 +1,88 @@
+variables:
+  MAVEN_OPTS: '-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository'
+  MAVEN_CLI_OPTS: '--batch-mode --errors --fail-at-end --show-version'
+
+services:
+  - docker:dind
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - .m2/repository/
+
+# develop 브랜치에 대한 배포 작업
+build_develop:
+  only:
+    - develop
+  image: maven:3.8.4-jdk-11
+  stage: build
+  before_script:
+    - mv "$DEV_PROPS" src/main/resources/secure.properties
+  script:
+    - mvn clean package $MAVEN_CLI_OPTS
+  artifacts:
+    paths:
+      - target/*.jar
+    expire_in: 1 week
+
+deploy_develop:
+  only:
+    - develop
+  image: ubuntu:18.04
+  stage: deploy
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    # 공개키 등록을 안했다면 Host Key Checking 비활성화 옵션 추가 (중간자 공격 위험)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" >> ~/.ssh/config'
+    # 공개키 등록을 했다면 known_hosts 등록 및 권한 변경
+    # - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    # - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" 'rm -f ~/pickmeup/pickmeup_dev.jar'
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" 'mkdir -p ~/pickmeup'
+    - scp -P "$SSH_PORT" target/*.jar "$SSH_USER"@"$SSH_SERVER":~/pickmeup/pickmeup_dev.jar
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" '~/pickmeup/deploy_dev.sh'
+
+# master 브랜치에 대한 배포 작업
+build_master:
+  only:
+    - master
+  image: maven:3.8.4-jdk-11
+  stage: build
+  before_script:
+    - mv "$DEPLOY_PROPS" src/main/resources/secure.properties
+  script:
+    - mvn clean package $MAVEN_CLI_OPTS
+  artifacts:
+    paths:
+      - target/*.jar
+    expire_in: 1 week
+
+deploy_master:
+  only:
+    - master
+  image: ubuntu:18.04
+  stage: deploy
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apt-get update -y && apt-get install openssh-client -y )'
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    # 공개키 등록을 안했다면 Host Key Checking 비활성화 옵션 추가 (중간자 공격 위험)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n\tStrictHostKeyChecking no\n\n" >> ~/.ssh/config'
+    # 공개키 등록을 했다면 known_hosts 등록 및 권한 변경
+    # - echo "$SSH_KNOWN_HOSTS" >> ~/.ssh/known_hosts
+    # - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" 'rm -f ~/pickmeup/pickmeup.jar'
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" 'mkdir -p ~/pickmeup'
+    - scp -P "$SSH_PORT" target/*.jar "$SSH_USER"@"$SSH_SERVER":~/pickmeup/pickmeup.jar
+    - ssh "$SSH_USER"@"$SSH_SERVER" -p"$SSH_PORT" '~/pickmeup/deploy.sh'

@@ -1,0 +1,295 @@
+.sign-up-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    width: 600px;
+    height: 700px;
+}
+.logo-img-section{
+    width: 140px;
+    height: fit-content;
+    margin: 0 auto 40px auto;
+}
+.logo-img-section img{
+    width: 100%;
+}
+.sign-up-form >p{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-left: 30px;
+}
+
+/* 회원가입 폼 grid */
+.form-container{
+    display: grid;
+    width: 570px;
+    height: 450px;
+    padding: 20px 20px;
+    grid-template-columns: 120px 330px 80px;
+    grid-template-rows: 50px 20px 50px 20px 50px 20px 50px 50px 50px 50px;
+    grid-template-areas: 
+        "id-label id-input id-check"
+        "id-error id-error id-error"
+        "pw-label pw-input pw-input"
+        "pw-error pw-error pw-error"
+        "pwchk-label pwchk-input pwchk-input"
+        "pwchk-error pwchk-error pwchk-error"
+        "name-label name-input name-input"
+        "address-label address-input address-input"
+        "det-address-label det-address-input det-address-input"
+        "phone-label phone-input phone-input";
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.form-container input{
+    width: 310px;
+    height: 40px;
+    border-radius: 10px;
+    border: thin solid rgb(165, 165, 165);
+    margin-top: 5px;
+    margin-left: 10px;
+    padding: 0 10px;
+}
+.form-container input:focus{
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+    box-shadow: 0 0 5px rgb(76, 204, 71);
+    transition: all 0.3s;
+}
+#id-label{
+    grid-area: id-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#id-input{
+    grid-area: id-input;
+}
+#id-check{
+    grid-area: id-check;
+}
+#id-check button{
+    height: 40px;
+    border-radius: 10px;
+    border: thin solid rgb(76, 204, 71);
+    background-color: white;
+    width: 70px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+#id-error{
+    grid-area: id-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: red;
+}
+#pw-label{
+    grid-area: pw-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#pw-input{
+    grid-area: pw-input;
+}
+#pw-error{
+    grid-area: pw-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: var(--font-dark);
+}
+#pwchk-label{
+    grid-area: pwchk-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#pwchk-input{
+    grid-area: pwchk-input;
+}
+#pwchk-error{
+    grid-area: pwchk-error;
+    font-size: 12px;
+    padding-left: 140px;
+    line-height: 20px;
+    color: red;
+}
+#name-label{
+    grid-area: name-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#name-input{
+    grid-area: name-input;
+}
+#address-label{
+    grid-area: address-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#address-input{
+    grid-area: address-input;
+}
+#address-research-btn{
+    height: 40px;
+    border-radius: 10px;
+    border: thin solid rgb(76, 204, 71);
+    background-color: white;
+    width: 70px;
+    margin-top: 5px;
+    margin-left: 15px;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+#det-address-label{
+    grid-area: det-address-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#det-address-input{
+    grid-area: det-address-input;
+}
+#phone-label{
+    grid-area: phone-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#phone-input{
+    grid-area: phone-input;
+}
+
+/* 이용약관 grid */
+.terms-of-use-container{
+    display: grid;
+    width: 570px;
+    height: 100px;
+    grid-template-columns: 120px 330px 80px;
+    grid-template-rows: 50px;
+    grid-template-areas:
+        "terms-of-use-label terms-of-use-checkbox terms-of-use-show";
+    padding: 20px;
+}
+#terms-of-use-label{
+    grid-area: terms-of-use-label;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 10px;
+}
+#terms-of-use-checkbox{
+    grid-area: terms-of-use-checkbox;
+    line-height: 50px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+#terms-of-use-checkbox label{
+    margin-left: 10px;
+}
+#terms-of-use-show{
+    grid-area: terms-of-use-show;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+#terms-of-use-show-btn{
+    height: 40px;
+    border-radius: 10px;
+    border: thin solid rgb(76, 204, 71);
+    background-color: white;
+    width: 70px;
+    margin-top: 5px;
+    margin-left: 5px;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}
+.buttons-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#c-sign-up-btn,
+#go-back{
+    width: 100px;
+    height: 40px;
+    border: thin solid rgb(76, 204, 71);
+    border-radius: 10px;
+    background: none;
+    color: rgb(76, 204, 71);
+    margin: 0 20px;
+    /* margin-left: 50%;
+    transform: translate(-50%); */
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s;
+}
+#c-sign-up-btn:hover,
+#go-back:hover{
+    background-color: rgb(76, 204, 71);
+    box-shadow: 0 0 20px rgb(107, 230, 103);
+    color: white;
+    transition: all 0.3s;
+}
+
+/* 이용약관 모달 */
+.csu-modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(2px);
+}
+.csu-modal-inner{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 400px;
+    height: 600px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  20px 20px 40px #d9d9d9,
+             -20px -20px 40px #ffffff;
+}
+.csu-modal-inner p{
+    font-size: 24px;
+    color: rgb(73, 73, 73);
+    text-align: center;
+}
+.csu-modal-inner textarea{
+    width: 360px;
+    height: 450px;
+    resize: none;
+    margin: 0 auto;
+    padding: 10px;
+    border: thin solid rgb(180, 180, 180);
+}
+.csu-modal-inner textarea:focus{
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+}
+.csu-modal-inner button{
+    background: none;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    margin: 0 auto;
+    color: rgb(76, 204, 71);
+    cursor: pointer;
+}

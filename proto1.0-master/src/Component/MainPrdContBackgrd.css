@@ -1,0 +1,65 @@
+.container-title{
+    width: 1100px;
+    margin: 50px auto 0 auto;
+    padding-left: 30px
+}
+.container-title h2{
+    margin: 0;
+    padding: 0;
+}
+.container-title button{
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--font-default);
+    transition: 0.3s;
+}
+.container-title button:hover{
+    color: var(--font-dark);
+    transform: translateX(3px);
+}
+.pcb-container{
+    position: relative;
+    width: 1100px;
+    height: fit-content;
+    overflow: hidden;
+    margin: 0 auto 50px;
+    z-index: 10;
+}
+
+/* 좌우버튼 클릭시 이동할 컨테이너 클릭당(x값 275씩 이동)*/
+.pcb{
+    width: 1100px;
+    height: fit-content;
+    margin: 0 auto;
+    transform: translate(0px);
+    transition: 0.5s;
+}
+.btn-container{
+    position: relative;
+    bottom: 340px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.left-btn,
+.right-btn{
+    background-color: rgba(255, 255, 255);
+    border: 1px solid rgb(235, 235, 235);
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 48px;
+    font-size: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: var(--font-default);
+    z-index: 80;
+}
+.left-btn:hover,
+.right-btn:hover{
+    color: black;
+}

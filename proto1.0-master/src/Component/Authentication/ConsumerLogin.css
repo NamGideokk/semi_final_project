@@ -1,0 +1,155 @@
+.main-container{
+    max-width: 302px;
+    width: 80%;
+    height: 362px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-60%);
+    border-radius: 15px;
+
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 120px 40px 110px 20px 70px;
+    grid-template-areas: 
+        "lc1 lc1 lc1"
+        "lc2 lc2 lc2"
+        "lc3 lc3 lc3"
+        "links links links"
+        "lc4 lc5 lc6"
+    ;
+    background: #f1f1f1;
+    box-shadow:  20px 20px 60px #d6d6d6,
+             -20px -20px 60px #ffffff;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid rgb(221, 221, 221);
+    z-index: 98;
+}
+.lc1{
+    grid-area: lc1;
+}
+.lc2{
+    grid-area: lc2;
+    line-height: 40px;
+}
+.lc3{
+    grid-area: lc3;
+}
+
+.links{
+    grid-area: links;
+    color: #5a5a5a;
+    font-size: 14px;
+}
+
+.links a{
+    margin: 0 15px;
+}
+
+.lc4{
+    grid-area: lc4;
+    line-height: 20px;
+    color: #5a5a5a;
+    padding-top: 20px;
+    padding-left: 5px;
+}
+.lc5{
+    grid-area: lc5;
+    line-height: 20px;
+    color: #5a5a5a;
+    padding-top: 20px;
+    padding-right: 0px;
+}
+
+.lc6 {
+    grid-area: lc6;
+    line-height: 20px;
+    color: #5a5a5a;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.lc1-img-container{
+    width: 150px;
+    height: 120px;
+    margin: 0 auto;
+}
+.lc1-img-container img{
+    width: 100%;
+    object-fit: cover;
+    margin-top: 30px;
+}
+.main-container button{
+    width: 200px;
+    height: 40px;
+    border-radius: 12px;
+    margin-top: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow:  10px 10px 30px #a1a1a146,
+             -10px -10px 30px #ffffff7c;
+    border: 1px solid rgb(223, 223, 223);
+    color: #5a5a5a;
+}
+.main-container button:hover{
+    background-color: #62e762;
+    color: white;
+    box-shadow:  0px 0px 30px #32e9326b,
+             0px 0px 10px #88ff8867;
+}
+.lc4 p,
+.lc5 p,
+.lc6 p,
+.links a{
+    cursor: pointer;
+    transition: 0.3s;
+}
+.lc4 p:hover,
+.lc5 p:hover,
+.lc6 p:hover,
+.links a:hover{
+    color: #21dd21;
+}
+
+.mini-footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(248, 248, 248);
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+}
+
+
+
+.lc3 input {
+    height: 40px;
+    width: 250px;
+    border: thin solid rgb(165, 165, 165);
+    padding-left: 5px;
+    margin-left: 25px;
+    margin-bottom: 5px;
+
+    border-radius: 10px;
+
+    vertical-align: middle;
+
+    float: left;
+
+    position: relative;
+    top: 10%;
+
+}
+
+
+.lc3 input:focus {
+    outline: none;
+    border: thin solid rgb(76, 204, 71);
+    box-shadow: 0 0 5px rgb(76, 204, 71);
+    transition: all 0.3s;
+}

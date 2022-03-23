@@ -1,0 +1,198 @@
+
+.format {
+    height: 700px;
+
+    justify-content: center;
+    display: flex;
+
+    margin: 0 auto;
+    max-width: 1100px;
+}
+
+.leftNav {
+    
+    margin:20px auto;
+    max-width: 200px;
+}
+
+
+.navigation{
+    border-bottom: 1px solid black;
+
+    min-width: 150px;
+}
+
+
+.right {
+    margin: 20px auto;
+    flex: auto;
+
+    max-width: 900px;
+}
+
+
+
+
+a{
+    text-decoration: none; /* 밑줄제거 */
+}
+
+
+.sub-title{
+    font-size: 22px;
+    padding:30px 8px 8px;
+    font-weight:bold;
+    border-bottom: 2px solid black;
+    
+}
+
+.sub-menu{
+    list-style: none;
+}
+
+.sub-menu li{
+    border-bottom: 1px solid gray;
+    width: 190px;
+}
+
+.sub-menu a{
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.sub-menu a:hover{
+    background-color: rgb(76, 204, 71);;
+    color: white;
+}
+
+/* 상품목록 페이지 */
+.sellerPrd-paging{
+    width: 940px;
+    height: 40px;
+    line-height: 40px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 22px;
+    border-top: 1px solid rgb(179, 179, 179);
+}
+
+.sp06-wrapper{
+    width: 90%;
+    height: fit-content;
+    margin: 0 auto;
+}
+.sp06-detail-btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 15px;
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 30px auto;
+}
+.sp06-detail-btn:hover{
+    color: var(--accent-default);
+    border: 1px solid var(--accent-default);
+}
+
+
+.rc-purchase-product-wrapper article{
+    margin: 30px 0 0 50px;
+    height: fit-content;
+}
+
+/* 판매 등록 버튼 */
+.sales-regi-btn{
+    padding: 5px 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid var(--accent-dark);
+    color: var(--accent-dark);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.sales-regi-btn:hover{
+    border: 1px solid var(--accent-default);
+    color: var(--accent-default);
+}
+
+.upload-form-wrapper{
+    width: fit-content;
+    height: fit-content;
+    padding: 60px 50px 50px 50px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bgcolor-default);
+    box-shadow: 2px 2px 20px rgba(162, 162, 162, 0.6);
+}
+
+.off-upload-form-icon{
+    position: relative;
+    left: 900px;
+    bottom: 30px;
+    font-size: 24px;
+    color: var(--font-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.off-upload-form-icon:hover,
+.off-sales-resi-form-icon:hover{
+    color: red;
+}
+
+/* 판매 등록 폼 */
+.prd-sales-resi-wrapper{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: fit-content;
+    width: fit-content;
+    padding: 50px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--bgcolor-default);
+    box-shadow: 2px 2px 20px rgba(162, 162, 162, 0.6);
+    text-align: center;
+}
+
+.prd-sales-resi-btn{
+    margin-top: 30px;
+    font-size: 20px;
+    width: fit-content;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 20px;
+    background-color: var(--accent-default);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.prd-sales-resi-btn:hover{
+    box-shadow: 0 3px 10px var(--accent-light);
+    transform: translateY(-3px);
+}
+
+.prd-sales-resi-wrapper p{
+    font-size: 22px;
+}
+
+.off-sales-resi-form-icon{
+    position: relative;
+    bottom: 45px;
+    left: 295px;
+    font-size: 24px;
+    color: var(--font-light);
+    cursor: pointer;
+    transition: 0.3s;
+}

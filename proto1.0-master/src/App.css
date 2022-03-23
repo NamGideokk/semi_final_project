@@ -1,0 +1,48 @@
+:root{
+    --accent-light : #7bff9f;
+    --accent-default : rgb(74, 214, 69);
+    --accent-dark : #00af41;
+
+    --font-light: rgb(140, 140, 140);
+    --font-default: rgb(104, 104, 104);
+    --font-dark: rgb(63, 63, 63);
+
+    --bgcolor-light: #fafafa;
+    --bgcolor-default: #f8f8f8;
+    --bgcolor-dark: #f3f3f3;
+
+    --border-default: #9b9b9b;
+
+    --rating-start: rgb(245, 223, 24);
+
+    --red-dark: rgb(230, 109, 109);
+}
+
+@font-face {
+    font-family: "Cafe24Air";
+    src: url("./font/WCafe24SsurroundAir.woff") format("woff"),
+    url("./font/Cafe24SsurroundAir.ttf") format("truetype"),
+    url("./font/Cafe24SsurroundAir.eot") format("eot");
+}
+
+@font-face {
+    font-family: "Welcome";
+    src: url("./font/WelcomeRegular.ttf");
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Welcome", sans-serif;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}

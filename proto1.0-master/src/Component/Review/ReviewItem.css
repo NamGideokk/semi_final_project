@@ -1,0 +1,487 @@
+/* 나의 찜한 상품 컨테이너 */
+.like-product-wrapper{
+    max-width: 1100px;
+    width: 100%;
+    min-height: 170px;
+    max-height: fit-content;
+    overflow: hidden;
+}
+.like-product-container{
+    margin: 10px auto;
+    max-width: 1000px;
+    width: 95%;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 173px 346px 3fr 3fr 70px;
+    grid-template-rows: 150px;
+    grid-template-areas:
+        "lpc1 lpc2 lpc3 lpc4 lpc5"
+    ;
+    background-color: #f8f8f8;
+}
+.lpc1{
+    grid-area: lpc1;
+}
+.lpc2{
+    grid-area: lpc2;
+}
+.lpc3{
+    grid-area: lpc3;
+}
+.lpc4{
+    grid-area: lpc4;
+}
+.lpc5{
+    grid-area: lpc5;
+    text-align: center;
+}
+.lpc4-btn{
+    width: fit-content;
+    height: fit-content;
+    padding: 5px 15px;
+    color: var(--accent-dark);
+    border: 1px solid var(--accent-dark);
+    margin: 60px auto 0 auto;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.lpc4-btn:hover{
+    color: var(--accent-default);
+    border: 1px solid var(--accent-default);
+}
+.lpc1-img-container{
+    width: 80%;
+    height: 120px;
+    margin: 15px auto;
+    overflow: hidden;
+}
+.lpc1-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.lpc2 p{
+    text-align: left;
+    margin: 70px 5px 0 5px;
+    font-size: 18px;
+}
+.lpc3 p{
+    margin: 70px 5px 0 5px;
+    font-size: 18px;
+}
+.lpc5 .prd-delete-btn{
+    font-size: 24px;
+    color: var(--font-light);
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 65px;
+}
+.prd-delete-btn:hover{
+    color: red;
+}
+/* @media screen and (max-width:920px) {
+    .purchase-product-container{
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 95%;
+        height: 150px;
+        display: grid;
+        grid-template-columns: 3fr 7fr 4fr 1fr;
+        grid-template-rows: 75px 75px;
+        grid-template-areas:
+            "lpc1 lpc2 lpc3 lpc5"
+            "lpc1 lpc2 lpc4 lpc5"
+        ;
+    }
+    .lpc3 p{
+        margin: 30px 5px 0 5px;
+        font-size: 18px;
+    }
+    .lpc4 p{
+        margin: 30px 5px 0 5px;
+        font-size: 18px;
+    }
+} */
+
+
+/* 리뷰글 컨테이너 */
+.review-container{
+    margin: 20px auto;
+    width: 492px;
+    height: 300px;
+    border-radius: 10px;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 70px;
+    grid-template-rows: 70px 88px 70px 70px;
+    grid-template-areas:
+        "reviewC1 reviewC2 reviewC3 reviewC4"
+        "reviewC5 reviewC5 reviewC5 reviewC4"
+        "reviewC5 reviewC5 reviewC5 reviewC6"
+        "reviewC8 reviewC8 reviewC8 reviewC7"
+    ;
+    text-align: center;
+}
+.reviewC1{
+    grid-area: reviewC1;
+}
+.reviewC1-img-container{
+    margin: 10px auto;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: white;
+    overflow: hidden;
+}
+.userrricon{
+    font-size: 50px;
+    color: var(--font-dark);
+}
+/* .reviewC1-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+.reviewC2{
+    grid-area: reviewC2;
+    padding-top: 42px;
+    text-align: left;
+    color: var(--font-dark);
+}
+.reviewC3{
+    grid-area: reviewC3;
+    padding-top: 42px;
+    color: var(--font-dark);
+}
+.reviewC4{
+    grid-area: reviewC4;
+    padding-top: 42px;
+    color: var(--font-dark);
+}
+.reviewC4 p{
+    display: inline-block;
+    margin-right: 3px;
+}
+.writer-rating-icon{
+    color: rgb(238, 238, 30);
+}
+
+.reviewC5{
+    grid-area: reviewC5;
+    text-align: left;
+    padding: 20px;
+}
+.reviewC6{
+    grid-area: reviewC6;
+    padding-top: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--font-default);
+    transition: 0.3s;
+}
+.reviewC6 .review-like-icon{
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.reviewC7{
+    grid-area: reviewC7;
+    padding-top: 16px;
+    font-size: 13px;
+    cursor: pointer;
+    color: var(--font-default);
+    transition: 0.3s;
+}
+.reviewC7 .review-comment-icon{
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+.reviewC6:hover,
+.reviewC7:hover{
+    color: var(--accent-default);
+}
+.reviewC8{
+    grid-area: reviewC8;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: left;
+    padding-left: 10px;
+}
+.reviewC8-img-container{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 0 10px 0 10px;
+
+}
+.reviewC8-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+
+/* 나의 정보 조회 컨테이너 */
+.rc-myinfo{
+    width: 100%;
+    height: 100%;
+}
+.myinfo-container{
+    margin: 30px auto;
+    display: grid;
+    width: 600px;
+    height: 600px;
+    grid-template-columns: 105px 3fr 100px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px 50px 50px 50px 50px 100px;
+    grid-template-areas:
+        "myinfo-id  myinfoii myinfo-notice"
+        "myinfo-name myinfon myinfo-notice"
+        "myinfo-contact myinfoc myinfoc"
+        "myinfo-address1 myinfoa1 myinfoa1"
+        "myinfo-address2 myinfoa2 myinfoa2"
+        "myinfo-adrres-code myinfoac myinfoac"
+        "myinfo-total-quantity myinfotq myinfotq"
+        "myinfo-total-price mytp mytp"
+        "myinfo-reg-date myrd myrd"
+        "myinfo-last-access myla myla"
+        "mybtn mybtn mybtn"
+    ;
+
+    line-height: 54px;
+}
+.myinfo-container>div{
+    padding: 0 10px;
+}
+#myinfo-id{
+    grid-area: myinfo-id;
+}
+
+#myinfoii{
+    grid-area: myinfoii;
+}
+#myinfoii::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-notice{
+    grid-area: myinfo-notice;
+    text-align: center;
+    padding-top: 30px;
+    position: relative;
+}
+.my-notice-icon{
+    font-size: 40px;
+    color: #b1b1b1;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.my-notice-icon:hover{
+    color: #c7c7c7;
+}
+.notice-count{
+    position: absolute;
+    bottom: 50px;
+    left: 45px;
+    min-width: 25px;
+    height: 25px;
+    width: fit-content;
+    background-color: var(--accent-default);
+    color: white;
+    border-radius: 50px;
+    line-height: 26px;
+    padding-right: 2px;
+    font-size: 12px;
+    cursor: pointer;
+}
+#myinfo-name{
+    grid-area: myinfo-name;
+}
+#myinfon{
+    grid-area: myinfon;
+}
+#myinfon::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-contact{
+    grid-area: myinfo-contact;
+}
+#myinfoc{
+    grid-area: myinfoc;
+}
+#myinfoc::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-address1{
+    grid-area: myinfo-address1;
+}
+#myinfoa1{
+    grid-area: myinfoa1;
+}
+#myinfoa1::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-address2{
+    grid-area: myinfo-address2;
+}
+#myinfoa2{
+    grid-area: myinfoa2;
+}
+#myinfoa2::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-adrres-code{
+    grid-area: myinfo-adrres-code;
+}
+#myinfoac{
+    grid-area: myinfoac;
+}
+#myinfoac::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-total-quantity{
+    grid-area: myinfo-total-quantity;
+}
+#myinfotq{
+    grid-area: myinfotq;
+}
+#myinfotq::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-total-price{
+    grid-area: myinfo-total-price;
+}
+#mytp{
+    grid-area: mytp;
+}
+#mytp::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+
+#myinfo-reg-date{
+    grid-area: myinfo-reg-date;
+}
+#myrd{
+    grid-area: myrd;
+}
+
+#myrd::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#myinfo-last-access{
+    grid-area: myinfo-last-access;
+}
+#myla{
+    grid-area: myla;
+}
+#myla::before{
+    content: "";
+    border-left: 1px solid var(--font-light);
+    margin-right: 20px;
+}
+#mybtn{
+    grid-area: mybtn;
+    margin: 40px auto 0 auto;
+}
+
+#delete-my-account-btn{
+    display: block;
+    width: fit-content;
+    height: fit-content;
+    font-size: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(230, 109, 109);
+    transition: 0.3s;
+    cursor: pointer;
+}
+#delete-my-account-btn:hover{
+    background-color: red;
+    transform: translateY(-3px);
+}
+
+/* 회원탈퇴 버튼 클릭시 팝업 모달창 */
+
+.delete-modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(245, 245, 245);
+    width: 300px;
+    height: 200px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px #9999;
+}
+.ddmm01{
+    width: 100%;
+    height: 125px;
+    padding-top: 30px;
+}
+.delete-modal input{
+    width: 200px;
+    height: 30px;
+    margin-top: 14px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 10px;
+}
+.delete-modal input:focus{
+    outline: none;
+}
+.ddmm02{
+    width: 100%;
+    height: 75px;
+}
+.ddmm02>button{
+    font-size: 18px;
+    padding: 7px 30px;
+    border-radius: 10px;
+    margin: 10px 15px;
+    cursor: pointer;
+}
+.ddmm02n{
+    border: 2px solid red;
+    color: red;
+}
+.ddmm02y{
+    background-color: rgb(230, 109, 109);
+    border: 2px solid rgb(230, 109, 109);
+    color: white;
+    transition: 0.3s;
+}
+.ddmm02y:hover{
+    background-color: red;
+    border: 2px solid red;
+}
